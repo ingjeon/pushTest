@@ -18,4 +18,6 @@ jobs:
         key: ${{ secrets.JMJKEY }}
         port: ${{ secrets.REMOTE_PORT }}
         script: |
-          echo test > /tmp/abcd
+          sudo rm -rf ./devops
+          sudo git clone https://github.com/ingjeon/pushTest.git
+          sudo mv -f ./devops/*.html /var/www/html
